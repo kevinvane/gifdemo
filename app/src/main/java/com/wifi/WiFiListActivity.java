@@ -48,6 +48,8 @@ public class WiFiListActivity extends AppCompatActivity {
     private SwitchCompat switch_wifi;
     private LinkWifi linkWifi;
 
+    public static final String DEVICE_SSID_HEAD = "WIN_";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -185,8 +187,13 @@ public class WiFiListActivity extends AppCompatActivity {
                         }
                     }
                 }
-                if (isAdd)
-                    newWifList.add(wifiList.get(i));
+                if (isAdd){
+                    //过滤WiFi SSID
+                    if(wifiList.get(i).SSID.startsWith(DEVICE_SSID_HEAD)){
+                        newWifList.add(wifiList.get(i));
+                    }
+                }
+
             }
         }
 
@@ -300,7 +307,6 @@ public class WiFiListActivity extends AppCompatActivity {
             new AlertDialog.Builder(context)
                     .setTitle("请输入该无线的连接密码")
                     .setMessage("无线SSID：" + wifiinfo.SSID)
-                    .setIcon(android.R.drawable.ic_dialog_info)
                     .setView(inputPwdView)
                     .setPositiveButton("确定",
                             new DialogInterface.OnClickListener() {

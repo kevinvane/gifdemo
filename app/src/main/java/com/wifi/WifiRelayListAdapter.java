@@ -9,7 +9,7 @@ import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.Message;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
+
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -120,45 +120,45 @@ public class WifiRelayListAdapter extends BaseAdapter {
 			}
 		});
 
-		convertView.setOnTouchListener(new View.OnTouchListener() {
+//		convertView.setOnTouchListener(new View.OnTouchListener() {
+//
+//			public boolean onTouch(View arg0, MotionEvent arg1) {
+//				if (arg1.getAction() == MotionEvent.ACTION_DOWN) {
+//					arg0.setBackgroundColor(0xaa333333);
+//				} else {
+//					arg0.setBackgroundColor(0x00ffffff);
+//				}
+//
+//				return false; // 表示继续传递该消息，如果返回true则表示该消息不再被传递
+//			}
+//		});
 
-			public boolean onTouch(View arg0, MotionEvent arg1) {
-				if (arg1.getAction() == MotionEvent.ACTION_DOWN) {
-					arg0.setBackgroundColor(0xaa333333);
-				} else {
-					arg0.setBackgroundColor(0x00ffffff);
-				}
-
-				return false; // 表示继续传递该消息，如果返回true则表示该消息不再被传递
-			}
-		});
-
-		if (childData.level < -90) {
-			if (lock_type)
-				wifi_state.setBackgroundResource(R.drawable.wifilevel0_lock);
-			else
-				wifi_state.setBackgroundResource(R.drawable.wifilevel0);
-		} else if (childData.level < -85) {
-			if (lock_type)
-				wifi_state.setBackgroundResource(R.drawable.wifilevel1_lock);
-			else
-				wifi_state.setBackgroundResource(R.drawable.wifilevel1);
-		} else if (childData.level < -70) {
-			if (lock_type)
-				wifi_state.setBackgroundResource(R.drawable.wifilevel2_lock);
-			else
-				wifi_state.setBackgroundResource(R.drawable.wifilevel2);
-		} else if (childData.level < -60) {
-			if (lock_type)
-				wifi_state.setBackgroundResource(R.drawable.wifilevel3_lock);
-			else
-				wifi_state.setBackgroundResource(R.drawable.wifilevel3);
-		} else if (childData.level < -50) {
-			if (lock_type)
-				wifi_state.setBackgroundResource(R.drawable.wifilevel4_lock);
-			else
-				wifi_state.setBackgroundResource(R.drawable.wifilevel4);
-		}
+//		if (childData.level < -90) {
+//			if (lock_type)
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel0_lock);
+//			else
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel0);
+//		} else if (childData.level < -85) {
+//			if (lock_type)
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel1_lock);
+//			else
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel1);
+//		} else if (childData.level < -70) {
+//			if (lock_type)
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel2_lock);
+//			else
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel2);
+//		} else if (childData.level < -60) {
+//			if (lock_type)
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel3_lock);
+//			else
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel3);
+//		} else if (childData.level < -50) {
+//			if (lock_type)
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel4_lock);
+//			else
+//				wifi_state.setBackgroundResource(R.drawable.wifilevel4);
+//		}
 
 		convertView.setTag("wifi_" + childData.BSSID);
 
