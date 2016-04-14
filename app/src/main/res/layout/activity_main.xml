@@ -24,6 +24,17 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="loopview"
+        android:text="LoopView"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="spinner"
+        android:text="SpinnerWheel"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="glide"
         android:text="Glide"/>
 

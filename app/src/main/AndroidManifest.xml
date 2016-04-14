@@ -30,7 +30,10 @@
         <activity
             android:name=".GifViewActivity"
             android:label="Gif" />
-        <activity android:name="com.wifi.WiFiListActivity"></activity>
+        <activity android:name="com.wifi.WiFiListActivity"/>
+        <activity android:name=".SpinnerWheelActivity"/>
+
+
     </application>
 
 </manifest>
