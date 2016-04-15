@@ -243,7 +243,7 @@ public class LoopView extends View {
         if (initPosition<0) {
             this.initPosition = 0;
         } else {
-            if (items!=null&&(items.size()-1)>initPosition) {
+            if (items!=null&&(items.size()-1)>=initPosition) {
                 this.initPosition = initPosition;
             }
         }

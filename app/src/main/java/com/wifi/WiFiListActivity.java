@@ -26,6 +26,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
+import android.widget.BaseAdapter;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -40,7 +41,7 @@ public class WiFiListActivity extends AppCompatActivity {
     private WifiManager wifiManager = null;
     private Context context = null;
     public SetWifiHandler setWifiHandler;
-    private WifiRelayListAdapter wifiListAdapter;
+    private BaseAdapter wifiListAdapter;
     private ListView wifi_list;
     private ImageButton refresh_list_btn;
     private ImageButton wifi_on_off_btn;
@@ -48,7 +49,7 @@ public class WiFiListActivity extends AppCompatActivity {
     private SwitchCompat switch_wifi;
     private LinkWifi linkWifi;
 
-    public static final String DEVICE_SSID_HEAD = "WIN_";
+    public static final String DEVICE_SSID_HEAD = "";//"WIN_"
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -197,7 +198,7 @@ public class WiFiListActivity extends AppCompatActivity {
             }
         }
 
-        wifiListAdapter = new WifiRelayListAdapter(context, newWifList,
+        wifiListAdapter = new WifiRelayListAdapterNew(context, newWifList,
                 setWifiHandler);
         wifi_list.setAdapter(wifiListAdapter);
     }
