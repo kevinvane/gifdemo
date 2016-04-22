@@ -43,4 +43,10 @@
         android:layout_height="wrap_content"
         android:onClick="gifview"
         android:text="GifView"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="container"
+        android:text="container"/>
 </LinearLayout>

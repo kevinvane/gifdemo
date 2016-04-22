@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.winext.gifdemo">
 
-
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -14,9 +13,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,10 +26,9 @@
         <activity
             android:name=".GifViewActivity"
             android:label="Gif" />
-        <activity android:name="com.wifi.WiFiListActivity"/>
-        <activity android:name=".SpinnerWheelActivity"/>
-
-
+        <activity android:name="com.wifi.WiFiListActivity" />
+        <activity android:name=".SpinnerWheelActivity" />
+        <activity android:name=".FragmentContainerAct" />
     </application>
 
 </manifest>

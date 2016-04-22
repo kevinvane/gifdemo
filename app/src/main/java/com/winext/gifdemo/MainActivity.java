@@ -3,6 +3,7 @@ package com.winext.gifdemo;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.*;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         DegreesFList.add("86°F");//F5
         DegreesFList.add("99°F");//F6
         createDialogLoopView(DegreesFList);
+    }
+    public void container(View view){
+        startActivity(new Intent(this, FragmentContainerAct.class));
     }
 
     public void spinner(View view){
